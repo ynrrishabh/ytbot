@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { authMiddleware } = require('../config/auth.config');
 const pointsService = require('../services/points.service');
-const User = require('../models/user.model');
+const User = require('../models/User');
 
 // Get user points
 router.get('/:userId', authMiddleware.verifyToken, async (req, res) => {
