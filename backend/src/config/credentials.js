@@ -14,9 +14,9 @@ const credentials = {
     // YouTube API Credentials
     youtube: {
         apiKey: process.env.YOUTUBE_API_KEY,
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        redirectUri: process.env.REDIRECT_URI || 'http://localhost:5000/auth/google/callback'
+        clientId: process.env.YOUTUBE_CLIENT_ID,
+        clientSecret: process.env.YOUTUBE_CLIENT_SECRET,
+        redirectUri: process.env.YOUTUBE_REDIRECT_URI || 'http://localhost:5000/auth/youtube/callback'
     },
 
     // Database Credentials
@@ -45,8 +45,8 @@ const credentials = {
 const validateCredentials = () => {
     const required = {
         'YouTube API Key': credentials.youtube.apiKey,
-        'Google Client ID': credentials.youtube.clientId,
-        'Google Client Secret': credentials.youtube.clientSecret,
+        'YouTube Client ID': credentials.youtube.clientId,
+        'YouTube Client Secret': credentials.youtube.clientSecret,
         'MongoDB URI': credentials.database.uri,
         'Gemini API Key': credentials.ai.geminiApiKey,
         'JWT Secret': credentials.auth.jwtSecret
