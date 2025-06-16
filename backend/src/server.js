@@ -137,7 +137,7 @@ const startServer = async () => {
         await connectDB();
 
         // Start server
-        const port = credentials.port;
+        const port = process.env.PORT || credentials.port;
         httpServer.listen(port, () => {
             console.log(`
 🚀 Server is running!
