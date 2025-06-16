@@ -3,21 +3,21 @@ const router = express.Router();
 const { auth, authMiddleware } = require('../config/auth.config');
 const User = require('../models/User');
 
-// Google OAuth login
-router.get('/google', (req, res) => {
+// YouTube OAuth login
+router.get('/youtube', (req, res) => {
     const authUrl = auth.getAuthUrl();
     res.json({ authUrl });
 });
 
-// Google OAuth callback
-router.get('/google/callback', async (req, res) => {
+// YouTube OAuth callback
+router.get('/youtube/callback', async (req, res) => {
     try {
         const { code } = req.query;
         if (!code) {
             return res.status(400).json({ error: 'No code provided' });
         }
 
-        // Get tokens from Google
+        // Get tokens from YouTube
         const tokens = await auth.getTokens(code);
 
         // Get user profile from YouTube
