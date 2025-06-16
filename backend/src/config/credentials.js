@@ -16,7 +16,7 @@ const credentials = {
         apiKey: process.env.YOUTUBE_API_KEY,
         clientId: process.env.YOUTUBE_CLIENT_ID,
         clientSecret: process.env.YOUTUBE_CLIENT_SECRET,
-        redirectUri: process.env.YOUTUBE_REDIRECT_URI || 'http://localhost:5000/auth/youtube/callback'
+        redirectUri: process.env.YOUTUBE_REDIRECT_URI || 'https://ytbotbackend.onrender.com/auth/youtube/callback'
     },
 
     // Database Credentials
