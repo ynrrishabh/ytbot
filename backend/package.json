@@ -23,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",
+    "@google/generative-ai": "^0.24.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
