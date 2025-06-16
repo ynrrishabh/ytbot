@@ -28,7 +28,11 @@ app.set('io', io);
 
 // Middleware
 app.use(cors({
-    origin: credentials.urls.client,
+    origin: [
+        credentials.urls.client,
+        'http://localhost:5500',
+        'http://127.0.0.1:5500'
+    ],
     credentials: true
 }));
 app.use(express.json());
