@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/dashboard", "destination": "/src/pages/dashboard.html" },
+    { "source": "/commands", "destination": "/src/pages/commands.html" },
+    { "source": "/auto-messages", "destination": "/src/pages/auto-messages.html" },
+    { "source": "/points", "destination": "/src/pages/points.html" },
+    { "source": "/settings", "destination": "/src/pages/settings.html" }
+  ]
+} 
