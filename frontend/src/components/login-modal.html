@@ -7,48 +7,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <!-- OAuth Login -->
+                <!-- YouTube OAuth Login -->
                 <div class="text-center mb-4">
-                    <button class="btn btn-outline-dark w-100 mb-2" id="googleLoginBtn">
-                        <i class="fab fa-google me-2"></i>Continue with Google
-                    </button>
-                    <button class="btn btn-outline-dark w-100" id="githubLoginBtn">
-                        <i class="fab fa-github me-2"></i>Continue with GitHub
+                    <button class="btn btn-danger w-100" id="googleLoginBtn">
+                        <i class="fab fa-youtube me-2"></i>Continue with YouTube
                     </button>
                 </div>
 
-                <div class="text-center mb-4">
-                    <span class="text-muted">or</span>
+                <div class="text-center">
+                    <p class="text-muted small">
+                        You need to be a YouTube channel owner to use this bot.
+                    </p>
                 </div>
-
-                <!-- Form Login -->
-                <form id="loginForm">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" required>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Remember me</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
-                </form>
-
-                <div class="text-center mt-3">
-                    <a href="#" class="text-decoration-none" id="forgotPasswordLink">
-                        Forgot password?
-                    </a>
-                </div>
-            </div>
-            <div class="modal-footer justify-content-center">
-                <p class="mb-0">
-                    Don't have an account?
-                    <a href="#" class="text-decoration-none" id="registerLink">Register</a>
-                </p>
             </div>
         </div>
     </div>
