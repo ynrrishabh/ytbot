@@ -10,6 +10,12 @@
 
 require('dotenv').config();
 
+// Debug logging
+console.log('Environment Variables:');
+console.log('YOUTUBE_CLIENT_ID:', process.env.YOUTUBE_CLIENT_ID ? 'Present' : 'Missing');
+console.log('YOUTUBE_CLIENT_SECRET:', process.env.YOUTUBE_CLIENT_SECRET ? 'Present' : 'Missing');
+console.log('YOUTUBE_API_KEY:', process.env.YOUTUBE_API_KEY ? 'Present' : 'Missing');
+
 const credentials = {
     // YouTube API Credentials
     youtube: {
