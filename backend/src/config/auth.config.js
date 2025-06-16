@@ -20,6 +20,11 @@ const oauth2Client = new google.auth.OAuth2(
     credentials.youtube.redirectUri
 );
 
+// Set API key for initial verification
+oauth2Client.setCredentials({
+    api_key: credentials.youtube.apiKey
+});
+
 // Required OAuth2 scopes
 const SCOPES = [
     'https://www.googleapis.com/auth/youtube.readonly',
