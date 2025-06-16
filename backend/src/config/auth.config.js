@@ -132,8 +132,13 @@ const auth = {
     // Get user profile from YouTube
     getYouTubeProfile: async (accessToken) => {
         try {
+            // Create a new OAuth2 client with the user's access token
             oauth2Client.setCredentials({ access_token: accessToken });
-            const response = await youtube.channels.list({
+            const youtubeUser = google.youtube({
+                version: 'v3',
+                auth: oauth2Client
+            });
+            const response = await youtubeUser.channels.list({
                 part: 'snippet,statistics',
                 mine: true
             });
