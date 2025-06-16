@@ -35,7 +35,7 @@ const SCOPES = [
 // YouTube API client
 const youtube = google.youtube({
     version: 'v3',
-    auth: oauth2Client
+    auth: credentials.youtube.apiKey  // Use API key directly for initial verification
 });
 
 // JWT Configuration
@@ -115,10 +115,12 @@ const auth = {
     // Verify YouTube API credentials
     verifyYouTubeCredentials: async () => {
         try {
+            // Use a simple API call that only requires API key
             await youtube.search.list({
                 part: 'snippet',
                 q: 'test',
-                maxResults: 1
+                maxResults: 1,
+                key: credentials.youtube.apiKey  // Explicitly pass API key
             });
             return true;
         } catch (error) {
